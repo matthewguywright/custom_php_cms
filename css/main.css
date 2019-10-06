@@ -1,0 +1,166 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*THIS IS THE NORMALIZING CODE FOR ALL BROWSERS-------------------------------------------------*/
+
+/*Normalizes margin and padding*/
+body, div, dl, dt, dd, ul, ol, li, h1, h1, h3, h4, h5, h6, pre, form, fieldset, input, p, blockquote, th, td
+{ margin: 0; padding: 0;}
+
+/*Normalizes font-size for headers*/
+h1, h2, h3, h4, h5, h6
+{ font-size: 100%;}
+
+/*Removes list-style from lists*/
+ol, ul
+{ list-style: none;}
+
+/*Normalizes font-style and font-weight to normal*/
+address, caption, cite, code, dfn, em, strong, th, var
+{ font-style: normal; font-weight: normal;}
+
+/*Collapses all tables*/
+table
+{ border-collapse: collapse; border-spacing: 0;}
+
+/*Removes borders from fieldset and img*/
+fieldset, img
+{ border: 0;}
+
+/*Left-aligns text in caption and th*/
+caption, th
+{ text-align: left;}
+
+/*Removes quotations from q*/
+q:before, q:after
+{ content: '';}
+
+/*Aligns entire html page and starts layout.css-------------------------------------------------*/
+html
+{ text-align: center; }
+
+/*ALPHA FIXES FOR PNGS IE 6*/
+* html img,
+* html img a:hover,
+* html .png,{
+    position:relative;
+    behavior: expression((this.runtimeStyle.behavior="none")&&(this.pngSet?this.pngSet=true:(this.nodeName == "IMG" && this.src.toLowerCase().indexOf('.png')>-1?(this.runtimeStyle.backgroundImage = "none",
+        this.runtimeStyle.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" + this.src + "', sizingMethod='image')",
+        this.src = "transparent.gif"):(this.origBg = this.origBg? this.origBg :this.currentStyle.backgroundImage.toString().replace('url("','').replace('")',''),
+        this.runtimeStyle.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" + this.origBg + "', sizingMethod='crop')",
+        this.runtimeStyle.backgroundImage = "none")),this.pngSet=true)
+    );
+}
+
+/*clearfix*/
+.clearfix {
+	content: ".";
+	display: block;
+	visibility: hidden;
+	height: 0;
+	clear: both;
+	}
+
+.clearfix { display: inline-block; }
+
+/*Aligns body to center and sets width, aligns text left*/
+body {
+ 	width: 100%;
+	margin: 0 auto;
+	font: small/1.4 Verdana, Arial, Helvetica, sans-serif;
+	color: #000000;
+	text-align: left;
+	background: #FFFFFF;
+	}
+
+/*LINKS*/
+a { color: #333333; }
+
+a:hover { text-decoration: underline; }
+
+/*PARAGRAPHS*/
+p { padding: 10px; margin-bottom: 10px; }
+
+/*HEADERS AND CLASSES*/
+h1 { font-size: 24px; padding: 10px; }
+
+h2 { font-size: 18px; margin-left: 10px; }
+
+h3 { font-size: 16px; padding: 10px; }
+
+.selected { font-weight: bold; color: #0066CC; }
+
+/*WRAPPERS*/
+#wrapper { 
+	width: 900px;
+	text-align: left;
+	margin: 0 auto;
+	}
+	
+#content_wrapper {
+	float: left;
+	width: 900px;
+	background: #FFFFFF url(../images/wrapperBkgd.jpg) repeat-y top center;
+	border: 2px solid #000000;
+	}
+
+/*IMAGES*/
+
+/*MASTHEAD*/
+#masthead {
+	width: 900px;
+	height: auto;
+	background: #666666;
+	}
+
+/*NAVIGATION*/
+#staffnavbar {
+	width: 320px;
+	float: left;
+	color: #333333;
+	}
+	
+ul#subjects li a { color: #FFFFFF; text-decoration: none; }
+
+ul#subjects li a:hover { text-decoration: underline; }
+	
+ul#subject li {
+	list-style: none;
+	margin: 0;
+	color: #FFFFFF;
+	}
+	
+.pages { padding-left: 20px; color: #FFFFFF; list-style: square; }
+	
+/*CONTENT_MAIN*/
+#content_main {
+	float: right;
+	width: 700px;
+	padding: 10px;
+	}
+	
+/*CONTENTLOAD*/
+#contentLoad {
+	float: left;
+	width: 700px;
+	}
+	
+.edit { padding-left: 10px; }
+	
+/*CONTENT_SUB*/
+#content_sub {
+	float: left;
+	width: 160px;
+	background: #FF9933;
+	padding: 10px;
+	}
+
+/*SITE_INFO*/
+#site_info {
+	width: 900px;
+	clear: both;
+	}
+
+em { font-style: italic; }
+
+strong { font-weight: bold; }
